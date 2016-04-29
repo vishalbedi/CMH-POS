@@ -2,7 +2,13 @@ package cmh.cli.pos;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * POSView Class 
+ * 
+ * desc: This class is the view of the application 
+ * All the code related to IO is handled in this class
+ * 
+ */
 public class POSView {
 	private int MODE;
 	private static final int ADMIN = 0;
@@ -130,10 +136,10 @@ public class POSView {
 			System.out.println("2. Add To Cart");
 			System.out.println("3. Search By");
 			System.out.println("4. View Cart");
-			if(sc.hasNextInt())
-			{cmd = sc.nextInt(); 
-			sc.nextLine();}
-			else{
+			if(sc.hasNextInt()){
+				cmd = sc.nextInt(); 
+				sc.nextLine();
+			}else{
 				sc.nextLine();
 				continue;
 			}
@@ -151,8 +157,7 @@ public class POSView {
 				if(sc.hasNextInt()){
 					id = sc.nextInt(); sc.nextLine();
 					sc.nextLine();
-				}
-				else{
+				}else{
 					sc.nextLine();
 					continue;
 				}
@@ -167,9 +172,11 @@ public class POSView {
 				System.out.println("1. Category");
 				System.out.println("2. Price Range");
 				int ans = 0;
-				if(sc.hasNextInt())
-				{ans = sc.nextInt(); sc.nextLine();}
-				else{
+				if(sc.hasNextInt()){
+					// nextInt takes in the int but leaves /n in buffer
+					ans = sc.nextInt(); 
+					sc.nextLine();
+				}else{
 					sc.nextLine();
 					continue;
 				}

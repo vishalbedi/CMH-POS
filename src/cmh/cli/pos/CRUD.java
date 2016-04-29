@@ -7,7 +7,12 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-
+/**
+ * CRUD class
+ * desc: This class handles the CRUD operations for the system.
+ * It stores data into files for persistent storage. 
+ * 
+ */
 public class CRUD {
 	
 	private ArrayList<Category> categories;
